@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test-setup - MarkPub Quickstart Test 02</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/mptest02/markpub-static/css/style.css">
+    <link rel="stylesheet" href="/mptest02/markpub-static/css/custom.css">
+    <link rel="stylesheet" href="https://unpkg.com/bluesky-comments@0.5.1/dist/bluesky-comments.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    <script src="/mptest02/lunr-index-1739745527.6225247.js"></script>
+    <script>var index = lunr.Index.load(lunr_index)</script>
+    
+    
+    <script src="/mptest02/lunr-posts-1739745527.6225247.js"></script>
+    <script> function randomPageLink() { return "/mptest02"+lunr_posts[Math.floor(Math.random() * lunr_posts.length)].link; } </script>
+    
+  </head>
+<body>
+  <div id="header">
+    <span id="hamburger-btn"
+    class="hidden">&#9776;</span><a class="button is-light" id="header-link" href="/mptest02/index.html">MarkPub Quickstart Test 02</a>
+  </div>
+
+  <div class="container" id="flex-container">
+    <div id="side-column">
+      <div>
+        <button id="hide-btn">Hide</button>
+        <button id="move-btn" class="hidden">Move to Sidebar</button>
+      </div>
+      <h3>Site Navigation</h3>
+<div class="navlinks">
+<ul>
+<li><a class="wikilink" href="/mptest02/README.html">HOME</a></li>
+<li><a href="/mptest02/search.html">SEARCH</a></li>
+<li><a href="/mptest02/all-pages.html">ALL PAGES</a></li>
+<li><a href="/mptest02/recent-pages.html">RECENT CHANGES</a></li>
+</ul>
+</div>
+<div class="navlinks">
+  <button onclick="location.href=`${randomPageLink()}`">
+    RANDOM PAGE
+  </button>
+</div>
+
+    </div>
+
+    <div id="main-column">
+      
+      <div> <!-- edit this page button -->
+	<p style="float:right; margin:.5em .5em
+	.5em"><a target="_blank" href="https://github.com/band/mptest02/edit/main/Test-setup.md"
+	class="edit-this-page-button">Edit on GitHub</a></p>
+	<br clear="all">
+      </div> <!-- edit this page button -->
+      
+      <h1>Test Setup</h1>
+<p>Primary aim: document steps to test the "MarkPub Quickstart"
+instructions.</p>
+<h3>2025-02-15 - mptest02 notes</h3>
+<ol>
+<li>Copied contents of mpTestCollection to this directory</li>
+</ol>
+<ul>
+<li>
+<p>MarkPub initialization must precede GitHub repository setup</p>
+<ul>
+<li>initialization installs a <code>.gitignore</code> file which is needed
+before Obsidian and Obsidian Git plugin is setup.</li>
+</ul>
+</li>
+<li>
+<p>Obsidian Git plugin can only be enabled in an existing Git repository</p>
+</li>
+</ul>
+<p>1.1. one simple way to enable MarkPub for a document collection</p>
+<ul>
+<li>
+<p>install MarkPub Python package</p>
+</li>
+<li>
+<p>Initialize the document collection folder using MarkPub
+N.B.: add CC License file to <code>markpub/templates</code> (TBD)
+TODO: put those steps here<br />
+TODO: add <code>.github/workflows/</code> directory to <code>templates</code> and add
+install of that directory to <code>markpub init</code> code</p>
+</li>
+<li>
+<p>make the document collection folder a GitHub repository
+TODO: put those steps here</p>
+<ul>
+<li>on <code>github.com</code> create a new repository with folder directory
+name (in this example <code>mptest02</code>)
+Do not initialize it with a README, license, or .gitignore files when creating it on GitHub.</li>
+<li>on your computer
+<ul>
+<li>CLI steps (in a Terminal app):</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-shell"># 1. Navigate to the document collection directory
+cd /path/to/document-directory
+
+# 2. Initialize a new git repository
+git init
+
+# 3. Add all files to staging
+git add .
+
+# 4. Commit the files
+git commit -m "Initial commit"
+
+# 5. Create a new repository on GitHub (this must be done manually on GitHub.com)
+# Then, add the remote repository URL
+git remote add origin https://github.com/username/document-directory.git
+
+# 6. Rename the default branch to 'main' (if needed)
+git branch -M main
+
+# 7. Push your code to GitHub
+git push -u origin main
+</code></pre>
+<ul>
+<li>
+<p>TODO: set up a web deployment service (GitHub Pages)
+put those steps here</p>
+</li>
+<li>
+<p>VERIFY GitHub Pages deployment</p>
+</li>
+<li>
+<p>TEST: update the repository content with a new page or changes to
+an existing page</p>
+<ul>
+<li>Git "commit" and "push" the updated pages<br />
+VERIFY GitHub Pages deployment is updated</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>OPTIONAL: Make it an Obsidian vault<br />
+DONE: create some wiki-links ...<br />
+TODO: install ObsidianGit plugin</li>
+</ol>
+<ul>
+<li>note: ObsidianSync plugin enabled by default?  - DISABLE</li>
+</ul>
+<ol start="4">
+<li>Test deployment</li>
+</ol>
+<p>TODO: separate this into two documents</p>
+<ul>
+<li>one for pre-MarkPub install and init</li>
+<li>one to test the MarkPub install and use instructions</li>
+</ul>
+<hr />
+<p>2025-02-04: testing a simple GitHub pages deployment:<br />
+(1): directory previously set up as a GitHub repository<br />
+(2): <code>markpub init directory-name</code></p>
+<pre><code class="language-shell">cd directory-name
+git add .
+git commit -m "MarkPub initialization"
+git push
+</code></pre>
+<p>(3): copied <code>.github/</code> directory from an existing document-collection
+repository</p>
+<ul>
+<li>edited the <code>.github/workflows/gh-pages.yml</code> file and inserted
+this repository's name into the <code>markpub build ...</code> command</li>
+</ul>
+<pre><code class="language-shell">git add .github/
+git commit -m "GitHub pages config files"
+git push
+</code></pre>
+<p>(4) logged into GitHub, and for this repository's "Pages" settings,
+set "Build and deployment" "Branch" to "gh-pages" in the drop-down
+menu, and "Save" that setting</p>
+<ul>
+<li>Saving that setting triggers and "pages build and deployment"
+workflow under the "Actions" tab</li>
+<li>when completed the website is available at:<br />
+<a href="https://githubaccountname.github.io/repositoryname">https://githubaccountname.github.io/repositoryname</a><br />
+(in this example this is https://band.github.io/mptestcollection)</li>
+</ul>
+
+      
+    </div>
+  </div>
+  
+  <footer class="footer">
+  <div class="content has-text-centered">
+    
+    <div><strong>MarkPub Quickstart Test 02</strong> by mr. bill.</div>
+    
+    
+    <div>Central repository at <a href="https://github.com/band/mptest02">mptest02</a>.</div>
+    
+    
+    <div>Licensed under <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</div>
+    
+    <div><em>Site last updated on Sunday, February 16, 2025 at 22:38 UTC.</em></div>
+  </div>
+</footer>
+</body>
+</html>
