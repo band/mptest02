@@ -18,7 +18,7 @@ instructions.
  - Initialize the document collection folder using MarkPub
    N.B.: add CC License file to `markpub/templates` (TBD)
    TODO: put those steps here  
-   TODO: add `.github/workflows/` directory to `templates` and add
+   DONE: add `.github/workflows/` directory to `templates` and add
    install of that directory to `markpub init` code
 
 - make the document collection folder a GitHub repository
@@ -54,7 +54,21 @@ git push -u origin main
 
  - TODO: set up a web deployment service (GitHub Pages)
 	 put those steps here  
+	 - when content is pushed for the first time; since there is
+       `.github/dependabot.yml` file, a `dependabot-updates` is run
+       automatically   
 
+	- TO enable GitHub Pages deployment:  
+		- from the repository "Settings" tab select "Pages"
+		- from this tab under "Branch" select the drop-down menu on
+          the "None" button and "Select branch" "gh-pages" and then
+          select the "Save" button  
+		- from the repository tabs select "Actions", and when the
+          "pages build and deployment" workflow finished with a green
+          checkmark select that workflow, from the
+          "pages-build-deployment" graph select the green checkmark
+          "deploy" link to see the deployed website.
+		  
  - VERIFY GitHub Pages deployment
 
  - TEST: update the repository content with a new page or changes to
